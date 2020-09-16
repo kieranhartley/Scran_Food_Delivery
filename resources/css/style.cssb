@@ -1,0 +1,517 @@
+/* 
+Red 1: #BC4B51
+Red 2: #863236
+*/
+
+/* --------------------------------- */
+/*  BASIC SETUP */
+/* --------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/* --------------------------------- */
+/*  REUSABLE COMPONENTS */
+/* --------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0 
+}
+
+.box {
+    padding: 1%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ---- Headings ---- */
+
+h1,
+h2 {
+    
+    
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 3px;
+
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #BC4B51;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;    
+}
+
+/* ---- Paragraphs ---- */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ---- Icons ---- */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #BC4B51;
+    margin-bottom: 10px;   
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #BC4B51;
+    font-size: 120%;
+
+    /* aligning text & icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 10px;
+
+}
+
+/* ---- Generic Links ---- */
+a:link,
+a:visited {
+    color: #BC4B51;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #BC4B51;
+    transition: border-bottom 0.2s, color 0.2s;
+    
+}
+
+a:hover,
+a:active {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ---- Buttons ---- */
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #BC4B51;
+    border: 1px solid #BC4B51;
+    color: #fff;
+    margin-right: 15px;
+    text-align: center;
+
+    
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #BC4B51;
+    color: #BC4B51;
+}
+
+.btn:hover,
+.btn:active,
+ {
+    background-color: #863236;
+    
+    /* border: 1px solid #BC4B51; */
+    /* color: #fff; */
+
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #863236;
+
+    
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #863236;
+    color: #fff;
+
+}
+
+/* --------------------------------- */
+/*  HEADER */
+/* --------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 100px;
+    margin-right: 15%;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 2px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 110%;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #BC4B51;
+    transition: border-bottom 0.5s;
+    
+}
+
+/* --------------------------------- */
+/*  MEALS */
+/* --------------------------------- */
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+.meal-photo img {
+    opacity: 0.6;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+.meal-photo img:hover {
+    transform: scale(1.03);
+    opacity: 1;
+
+}
+
+/* --------------------------------- */
+/*  HOW IT WORKS */
+/* --------------------------------- */
+
+.section-steps {
+    background-color: white;
+
+}
+
+.steps-box {
+    
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+
+}
+
+.app-screen {
+    width: 50%;
+    margin-left: 30%;
+}
+
+.works-step {
+    margin-top: 10%;
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+
+}
+
+.works-step div {
+    color: #BC4B51;
+    border: 2px solid #BC4B51;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+
+/* --------------------------------- */
+/*  CITIES */
+/* --------------------------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+
+}
+
+/* --------------------------------- */
+/*  TESTIMONIALS */
+/* --------------------------------- */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* --------------------------------- */
+/*  SIGN UP */
+/* --------------------------------- */
+.section-plans {
+    background-color: #d7dae0; 
+}
+
+.plan-box {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.plan-box div:first-child {
+    background-color: white;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+.plan-price {
+    font-size: 250%;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #BC4B51;
+
+}
+
+.plan-price-meal {
+    font-size: 80%;
+} 
+
+/* --------------------------------- */
+/*  FORM */
+/* --------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+/* --------------------------------- */
+/*  FOOTER */
+/* --------------------------------- */
+
+footer {
+    background-color: #333;
+
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
